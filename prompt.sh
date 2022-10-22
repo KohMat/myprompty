@@ -6,7 +6,7 @@ if [ "${BASH_SOURCE[0]}" -ef "$0" ]; then
 fi
 
 if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
-    current_dir=$(pwd)
+    current_dir=$(dirname -- "$BASH_SOURCE";)
 
     # Set config variables first
     # GIT_PROMPT_ONLY_IN_REPO=1 # uncoment to enable only in git repository
